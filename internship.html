@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/internship" method=""post>
+    <label>Name</label>
+    <input type = "text" id="name" , name="Name" placeholder = "enter your name"> <br>
+    <label>Email</label>
+    <input type="text" id="email" , name="email" placeholder = "enter your email."> <br>
+    <label>Date of birth</label>
+    <input type="text" id="dob" , name = "Date of birth" placeholder="enter Date of birth"> <br>
+    <label>Password</label>
+    <input type="text" id="password" , name="Password" placeholder="enter your Password"> <br>
+    <label>Gender:</label>
+    <input type="radio" value="male" id="male" , name= "gender" >
+    <label>male</label>
+    <input type="radio" value = "female" id = "female" , name = "gender" >
+    <label>female</label>
+    <input type="radio" id ="other" value = "other" , name  = "gender">
+    <label>other</label> <br>
+    <label>branch</label> <br>
+    <select>
+        <option value = "cse" id="cse">CSE</option>
+        <option value = "it" id="it">ID</option>
+        <option value = "ece" id="ece">ECE</option>
+        <option value = "mechanical" id="mechanical">Mechanical</option> <br>
+    </select> <br>
+    <label>Skills:</label> <br>
+    <input type="checkbox" id="java" name="skills" value="java"> 
+    <label>java</label> <br>
+    <input type="checkbox" id="javascript" name="javascript" value ="javascript">
+    <label>javascript</label> <br>
+    <input type="checkbox" id="HTML" name="skills" value ="HTML">
+    <label>HTML</label> <br>
+    <input type="checkbox" id=" CSS" name="skills" value =" CSS">
+    <label>CSS</label> <br>
+    <input type="checkbox" id="React" name="skills" value ="React">
+    <label>React</label> <br>
+    <label> Internship preferences:</label> <br>
+    <input type ="radio" id="preference" name = "internship preferences" value ="work from home">
+    <label>Work From Home</label> <br>
+    <input type="radio" id="preferences" name = "internship preferences" value="remote">
+    <label>remote</label> <br>
+    <input type="radio" id="preferencess" name = "internship preferences" value="office">
+    <label>office</label> <br>
+    <title>upload resume</title>
+    <input type="file" id="filen" name="upload resume" value="file" required> <br>
+    <label>cover letter</label> <br>
+    <textarea id="cover letter" name="cover letter" value="cover letter" row="10" column="5" placeholder="input"> </textarea> <br>
+    <button type="Submit">Submit</button> 
+    <button type="Reset">Reset</button>
+    </form>
+</body>
+</html>
