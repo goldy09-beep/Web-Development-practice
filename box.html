@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,5 +11,58 @@
         Hello world i am css
     </div>
     <div style="background-color: brown;height: 200px; width: 200px; margin:10px; padding:20px">
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions</title>
+     
+    <style> 
+    .box {
+        background-color: rgb(142,209,209);
+    height: 200px;
+    width: 200px;
+    margin: 30px;
+    position:relative
+    }
+
+    #box-1 {
+    background-color: lightblue;
+    position: static;
+    }
+
+   #box-2 {
+    background-color: lightgreen;
+    position: relative;
+    left: 50px;
+  }
+
+   #box-3 {
+    background-color: lightcoral;
+    position: absolute;
+    top: 50px;
+    left: 300px;
+  }
+
+  #box-4 {
+    background-color: lightyellow;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+  }
+  </style>
+  </head>
+  <body>
+  <div id="box-1" class="box">I am static</div>
+<div id="box-2" class="box">I am relative</div>
+<div id="box-3" class="box">I am absolute</div>
+<div id="box-4" class="box">I am fixed</div>
+    
+    </body>
+
 </body>
 </html>
