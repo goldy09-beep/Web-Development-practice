@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example</title>
+
+    <style>
+        .box-container {
+            background-color: bisque;
+            display: flex;
+            justify-content:space-between;
+            align-items: flex-end;
+            gap: 30px;
+            height: 600px;
+        }
+
+        .box {
+            background-color: rgb(83, 83, 211);
+            height: 200px;
+            width: 200px;
+            margin: 50px;
+            display: flex;
+            align-items: center;
+             justify-content: center;
+        }
+           
+           .lower-box{
+            background-color:  rgb(83, 83, 211);
+            height: 200px;
+            width: 300px;
+            display: flex;
+           }
+           
+    </style>
+</head>
+
+<body>
+
+    <div class="box-container">
+        <div class="box"><h1>box-1 hello i am div</h1></div>
+        <div class="box"><h1>box-1</h1></div>
+        <div class="box"><h1>box-1</h1></div>
+        <div class="box"><h1>box-1</h1></div>
+    </div>
+
+</body>
+</html>
