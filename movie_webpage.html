@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Cards</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to bottom, #eeeafd, #ffffff);
+            padding: 40px 8%;
+        }
+
+        /* Main container */
+        .cards-container {
+            display: flex;
+            background-color: #eae5ff;
+            font-family: sans-serif;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Heading */
+        .heading {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 35px;
+            color: #111;
+        }
+
+        /* Cards in one row */
+        .movie-cards {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Individual card */
+        .movie-card {
+            width: 250px;
+            background-color: white;
+            border: 1px solid #0000001f;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        /* Movie poster */
+        .movie-image img {
+            width: 100%;
+            height: 325px;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Information section */
+        .movie-info {
+            padding: 16px;
+        }
+
+        .movie-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #111;
+        }
+
+        .movie-detail {
+            font-size: 16px;
+            color: #545459;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="cards-container">
+
+        <h1 class="heading">Top Hindi movies near you</h1>
+
+        <div class="movie-cards">
+
+            <!-- Card 1 -->
+            <div class="movie-card">
+
+                <div class="movie-image">
+                    <img
+                        src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg"
+                        alt="Hanuman Ansh">
+                </div>
+
+                <div class="movie-info">
+                    <h2 class="movie-title">Hanuman Ansh</h2>
+                    <span class="movie-detail">U | Hindi</span>
+                </div>
+
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="movie-card">
+
+                <div class="movie-image">
+                    <img
+                        src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg"
+                        alt="Mirzapur">
+                </div>
+
+                <div class="movie-info">
+                    <h2 class="movie-title">Mirzapur: The Movie</h2>
+                    <span class="movie-detail">A | Hindi</span>
+                </div>
+
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="movie-card">
+
+                <div class="movie-image">
+                    <img
+                        src="https://cdn.district.in/movies-assets/images/cinema/toxiv%3Dc-8340c900-9c6f-11f1-97d4-73a32236137e.jpg"
+                        alt="Toxic">
+                </div>
+
+                <div class="movie-info">
+                    <h2 class="movie-title">Toxic: A Fairy Tale for Grown-ups</h2>
+                    <span class="movie-detail">A | Hindi and 1 more</span>
+                </div>
+
+            </div>
+
+
+            <!-- Card 4 -->
+            <div class="movie-card">
+
+                <div class="movie-image">
+                    <img
+                        src="https://cdn.district.in/movies-assets/images/cinema/AW_Poster-18591030-9548-11f1-b29d-8985d3d6c644.jpg"
+                        alt="Awarapan 2">
+                </div>
+
+                <div class="movie-info">
+                    <h2 class="movie-title">Awarapan 2</h2>
+                    <span class="movie-detail">UA16+ | Hindi</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
