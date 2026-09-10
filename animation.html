@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #e50914;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Booking message */
+        .booking-confirmed {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            background-color: #28c76f;
+            color: white;
+            padding: 18px 25px;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        /* Main */
+        .container {
+            width: 90%;
+            margin: 40px auto;
+        }
+
+        .heading {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #222;
+        }
+
+        /* Movies */
+       .movies {
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    gap: 35px;
+    justify-content: center;
+}
+        .movie-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: 0.3s;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .movie-card {
+    background-color: white;
+    width: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+        .movie-info {
+            padding: 18px;
+        }
+
+        .movie-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .details {
+            color: #666;
+            margin-bottom: 18px;
+        }
+
+        .rating {
+            color: #555;
+            margin-bottom: 18px;
+        }
+
+        .star {
+            color: #f4c542;
+        }
+
+        .book-btn {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 11px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .book-btn:hover {
+            background-color: #222;
+        }
+
+        /* Responsive */
+        @media(max-width: 900px) {
+            .movies {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+            .movies {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Booking Confirmed -->
+    <div class="booking-confirmed" id="confirmation">
+        ✓ Booking Confirmed!!
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <div class="movies">
+
+            <!-- Movie 1 -->
+            <div class="movie-card">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg"
+                    alt="Mirzapur The Movie">
+
+                <div class="movie-info">
+                    <div class="movie-title">
+                        Mirzapur: The Movie
+                    </div>
+
+                    <div class="rating">
+                        <span class="star">★</span>
+                        8.5 | A | Hindi
+                    </div>
+
+                    <button class="book-btn" onclick="bookMovie('Mirzapur: The Movie')">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Movie 2 -->
+            <div class="movie-card">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/Hanuman-Ansh-3199a900-6975-11f1-a51b-91d242246b61.jpg"
+                    alt="Hanuman">
+
+                <div class="movie-info">
+                    <div class="movie-title">
+                        Hanuman
+                    </div>
+
+                    <div class="rating">
+                        <span class="star">★</span>
+                        9.0 | U | Hindi
+                    </div>
+
+                    <button class="book-btn" onclick="bookMovie('Hanuman')">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Movie 3 -->
+            <div class="movie-card">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg"
+                    alt="Mirzapur">
+
+                <div class="movie-info">
+                    <div class="movie-title">
+                        Mirzapur
+                    </div>
+
+                    <div class="rating">
+                        <span class="star">★</span>
+                        8.5 | A | Hindi
+                    </div>
+
+                    <button class="book-btn" onclick="bookMovie('Mirzapur')">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Movie 4 -->
+            <div class="movie-card">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg"
+                    alt="Movie">
+
+                <div class="movie-info">
+                    <div class="movie-title">
+                        Mirzapur
+                    </div>
+
+                    <div class="rating">
+                        <span class="star">★</span>
+                        8.5 | A | Hindi
+                    </div>
+
+                    <button class="book-btn" onclick="bookMovie('Mirzapur')">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Movie 5 -->
+            <div class="movie-card">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg"
+                    alt="Movie">
+
+                <div class="movie-info">
+                    <div class="movie-title">
+                        Mirzapur
+                    </div>
+
+                    <div class="rating">
+                        <span class="star">★</span>
+                        8.5 | A | Hindi
+                    </div>
+
+                    <button class="book-btn" onclick="bookMovie('Mirzapur')">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Movie 6 -->
+            <div class="movie-card">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/_Poster-d0d78f60-961a-11f1-8483-eb84b060bac3.jpg"
+                    alt="Movie">
+
+                <div class="movie-info">
+                    <div class="movie-title">
+                        Mirzapur
+                    </div>
+
+                    <div class="rating">
+                        <span class="star">★</span>
+                        8.5 | A | Hindi
+                    </div>
+
+                    <button class="book-btn" onclick="bookMovie('Mirzapur')">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function bookMovie(movieName) {
+            alert("Booking confirmed for " + movieName);
+        }
+    </script>
+
+</body>
+</html>
